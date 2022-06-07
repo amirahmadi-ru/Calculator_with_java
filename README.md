@@ -1,2 +1,2 @@
-# Calculator_with_java
-Calculator with java
+# Calculator with java
+My first project with Java is this Calculator, Which has graphical user interface.
