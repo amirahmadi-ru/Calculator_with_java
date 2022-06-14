@@ -2,18 +2,21 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Calculator {
-
-	public Calculator(){
+		JFrame frame;
 		
+	public Calculator(){
+		JFrame frame;
 		
 	}
 	
 	public void setupAndShowMainFrame(){
-		JFrame frame = new JFrame("Calculator");
+		frame = new JFrame("Calculator");
         frame.setSize(420,420);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
+        frame.setLayout(null);
+        
 	}
 	
 	public void createAndShowButtons(){
@@ -28,10 +31,10 @@ public class Calculator {
 		buttonNumber3.setBounds(180,240,50,40);
 		buttonAdd.setBounds(250,240,50,40);
 		
-//		frame.add(buttonNumber1);
-//		frame.add(buttonNumber2);
-//		frame.add(buttonNumber3);
-//		frame.add(buttonAdd);
+		frame.add(buttonNumber1);
+		frame.add(buttonNumber2);
+		frame.add(buttonNumber3);
+		frame.add(buttonAdd);
 		
-		}
+	}
 }
