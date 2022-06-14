@@ -5,5 +5,5 @@ public class Main {
 		calculator.setupAndShowMainFrame();
 		calculator.createAndShowButtons();
 		
-    }
+    }    
 }
