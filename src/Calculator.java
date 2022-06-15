@@ -5,17 +5,16 @@ public class Calculator {
 		JFrame frame;
 		
 	public Calculator(){
-		JFrame frame;
 		
 	}
 	
 	public void setupAndShowMainFrame(){
 		frame = new JFrame("Calculator");
-        frame.setSize(350,500);
-        frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setResizable(false);
-        frame.setLayout(null);
+        	frame.setSize(350,500);
+        	frame.setVisible(true);
+        	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        	frame.setResizable(false);
+        	frame.setLayout(null);
         
 	}
 	
@@ -111,7 +110,6 @@ public class Calculator {
 
 		frame.add(buttonDelete);
 		frame.add(buttonClear);
-		
 		
 	}
 }
