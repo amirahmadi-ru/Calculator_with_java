@@ -24,6 +24,7 @@ public class Calculator implements ActionListener{
 		JButton buttonMines;
 		JButton buttonDelete;
 		JButton buttonClear;
+		JTextField textField;
 		
 	public Calculator(){
 		
@@ -44,7 +45,7 @@ public class Calculator implements ActionListener{
 		//--------------------------------------
 		// TextFiled
 		
-		JTextField textField = new JTextField();
+		textField = new JTextField();
 		textField.setBounds(30,40,280,45);
 		frame.add(textField);
 		
@@ -163,13 +164,13 @@ public class Calculator implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getSource() == buttonNumber1){
-			System.out.println("button1");
+			textField.setText(textField.getText().concat("1"));
 		}
 		if(e.getSource() == buttonNumber2){
-			System.out.println("button2");
+			textField.setText(textField.getText().concat("2"));
 		}
 		if(e.getSource() == buttonNumber3){
-			System.out.println("button3");
+			textField.setText(textField.getText().concat("3"));
 		}
 		if(e.getSource() == buttonAdd){
 			System.out.println("buttonadd");
@@ -178,13 +179,13 @@ public class Calculator implements ActionListener{
 		//--------------------------------------
 		
 		if(e.getSource() == buttonNumber4){
-			System.out.println("button4");
+			textField.setText(textField.getText().concat("4"));
 		}
 		if(e.getSource() == buttonNumber5){
-			System.out.println("button5");
+			textField.setText(textField.getText().concat("5"));
 		}
 		if(e.getSource() == buttonNumber6){
-			System.out.println("button6");
+			textField.setText(textField.getText().concat("6"));
 		}
 		if(e.getSource() == buttonMulti){
 			System.out.println("buttonmulti");
@@ -193,13 +194,13 @@ public class Calculator implements ActionListener{
 		//--------------------------------------
 		
 		if(e.getSource() == buttonNumber7){
-			System.out.println("button7");
+			textField.setText(textField.getText().concat("7"));
 		}
 		if(e.getSource() == buttonNumber8){
-			System.out.println("button8");
+			textField.setText(textField.getText().concat("8"));
 		}
 		if(e.getSource() == buttonNumber9){
-			System.out.println("button9");
+			textField.setText(textField.getText().concat("9"));
 		}
 		if(e.getSource() == buttonDiv){
 			System.out.println("buttondiv");
@@ -208,10 +209,10 @@ public class Calculator implements ActionListener{
 		//--------------------------------------
 		
 		if(e.getSource() == buttonDecimal){
-			System.out.println("buttondecimal");
+			textField.setText(textField.getText().concat("."));
 		}
 		if(e.getSource() == buttonZero){
-			System.out.println("buttonzero");
+			textField.setText(textField.getText().concat("0"));
 		}
 		if(e.getSource() == buttonEqual){
 			System.out.println("buttonequal");
