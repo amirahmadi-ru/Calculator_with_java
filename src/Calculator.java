@@ -25,6 +25,10 @@ public class Calculator implements ActionListener{
 		JButton buttonDelete;
 		JButton buttonClear;
 		JTextField textField;
+		String operation = "";
+		
+		double firstInput = 0.0;
+		double secondInput = 0.0;
 		
 	public Calculator(){
 		
@@ -173,7 +177,9 @@ public class Calculator implements ActionListener{
 			textField.setText(textField.getText().concat("3"));
 		}
 		if(e.getSource() == buttonAdd){
-			System.out.println("buttonadd");
+			firstInput = Double.parseDouble(textField.getText());
+			operation = "+";
+			textField.setText("");
 		}
 		
 		//--------------------------------------
@@ -188,7 +194,9 @@ public class Calculator implements ActionListener{
 			textField.setText(textField.getText().concat("6"));
 		}
 		if(e.getSource() == buttonMulti){
-			System.out.println("buttonmulti");
+			firstInput = Double.parseDouble(textField.getText());
+			operation = "*";
+			textField.setText("");
 		}	
 		
 		//--------------------------------------
@@ -203,7 +211,9 @@ public class Calculator implements ActionListener{
 			textField.setText(textField.getText().concat("9"));
 		}
 		if(e.getSource() == buttonDiv){
-			System.out.println("buttondiv");
+			firstInput = Double.parseDouble(textField.getText());
+			operation = "/";
+			textField.setText("");
 		}
 		
 		//--------------------------------------
@@ -215,19 +225,48 @@ public class Calculator implements ActionListener{
 			textField.setText(textField.getText().concat("0"));
 		}
 		if(e.getSource() == buttonEqual){
-			System.out.println("buttonequal");
+			secondInput = Double.parseDouble(textField.getText());
+			
+			if(operation.equals("+")){
+				double result = firstInput + secondInput;
+				textField.setText(result+"");
+			}
+			
+			if(operation.equals("*")){
+				double result = firstInput * secondInput;
+				textField.setText(result+"");
+			}
+			
+			if(operation.equals("/")){
+				double result = firstInput / secondInput;
+				textField.setText(result+"");
+			}
+			
+			if(operation.equals("-")){
+				double result = firstInput - secondInput;
+				textField.setText(result+"");
+			}
+			
 		}
 		if(e.getSource() ==  buttonMines){
-			System.out.println("buttonmines");
+			firstInput = Double.parseDouble(textField.getText());
+			operation = "-";
+			textField.setText("");
 		}
 		
 		//--------------------------------------
 		
 		if(e.getSource() == buttonDelete){
-			System.out.println("buttondelete");
+			String content = textField.getText();
+			textField.setText("");
+			for (int i = 0; i < content.length() -1; i++){
+				textField.setText(textField.getText()+content.charAt(i));
+			}
+
 		}
 		if(e.getSource() == buttonClear){
-			System.out.println("buttonclear");
+			textField.setText("");
+			operation = "";
 		}
 		
 		
